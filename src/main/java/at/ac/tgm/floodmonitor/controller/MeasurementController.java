@@ -1,6 +1,7 @@
 package at.ac.tgm.floodmonitor.controller;
 
 import at.ac.tgm.floodmonitor.model.Measurement;
+import at.ac.tgm.floodmonitor.model.WarningLevel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,8 @@ public class MeasurementController {
                 120.5,
                 4.2,
                 18.6,
-                87.0
+                87.0,
+                WarningLevel.NORMAL
         );
     }
 
@@ -33,7 +35,8 @@ public class MeasurementController {
                         110.2,
                         2.5,
                         17.8,
-                        89.0
+                        89.0,
+                        WarningLevel.NORMAL
                 ),
                 new Measurement(
                         LocalDateTime.now().minusHours(1),
@@ -41,7 +44,8 @@ public class MeasurementController {
                         115.8,
                         3.1,
                         18.2,
-                        88.0
+                        88.0,
+                        WarningLevel.NORMAL
                 ),
                 new Measurement(
                         LocalDateTime.now(),
@@ -49,7 +53,8 @@ public class MeasurementController {
                         120.5,
                         4.2,
                         18.6,
-                        87.0
+                        87.0,
+                        WarningLevel.NORMAL
                 )
         );
     }

@@ -10,6 +10,7 @@ public class Measurement {
     private double rainfall;
     private double temperature;
     private double batteryLevel;
+    private WarningLevel warningLevel;;
 
     public Measurement() {
     }
@@ -20,7 +21,8 @@ public class Measurement {
             double flowRate,
             double rainfall,
             double temperature,
-            double batteryLevel
+            double batteryLevel,
+            WarningLevel warningLevel
     ) {
         this.timestamp = timestamp;
         this.waterLevel = waterLevel;
@@ -28,6 +30,7 @@ public class Measurement {
         this.rainfall = rainfall;
         this.temperature = temperature;
         this.batteryLevel = batteryLevel;
+        this.warningLevel = warningLevel;
     }
 
     public LocalDateTime getTimestamp() {
@@ -76,5 +79,13 @@ public class Measurement {
 
     public void setBatteryLevel(double batteryLevel) {
         this.batteryLevel = batteryLevel;
+    }
+
+    public WarningLevel getWarningLevel() {
+        return warningLevel;
+    }
+
+    public void setWarningLevel(WarningLevel warningLevel) {
+        this.warningLevel = warningLevel;
     }
 }
