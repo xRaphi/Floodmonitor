@@ -10,7 +10,7 @@ description = 'Floodmonitor'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(26)
+        languageVersion = JavaLanguageVersion.of(24)
     }
 }
 
@@ -19,17 +19,23 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // REST-Schnittstelle mit Spring MVC
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+
+    // Validierung von Eingaben
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // JSON und XML
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+
+    // Automatischer Neustart während der Entwicklung
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
-    testImplementation 'org.springframework.boot:spring-boot-starter-validation-test'
+
+    // Automatisierte Tests
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-validation-test'
+
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
