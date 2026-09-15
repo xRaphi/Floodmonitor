@@ -1,0 +1,7 @@
+### Stationen als JSON abrufen
+GET http://localhost:8080/api/v1/stations
+Accept: application/json
+
+### Stationen als XML abrufen
+GET http://localhost:8080/api/v1/stations
+Accept: application/xml
