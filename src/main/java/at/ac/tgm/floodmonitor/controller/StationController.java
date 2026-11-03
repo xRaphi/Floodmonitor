@@ -6,7 +6,9 @@ import at.ac.tgm.floodmonitor.services.StationService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -39,5 +41,14 @@ public class StationController {
         }
 
         return ResponseEntity.ok(station);
+    }
+
+    @PostMapping
+    public ResponseEntity<Station> addStation(@RequestBody Station station) {
+        Station savedStation = stationService.addStation(station);
+
+        return ResponseEntity
+                .created(URI.create("/api/v1/stations/" + savedStation.getId()))
+                .body(savedStation);
     }
 }
