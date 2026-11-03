@@ -24,6 +24,11 @@ public class StationController {
         return stationService.getAllStations();
     }
 
+    @GetMapping("/count")
+    public int getStationCount() {
+        return stationService.getStationCount();
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Station> getStationById(@PathVariable Long id) {
 
