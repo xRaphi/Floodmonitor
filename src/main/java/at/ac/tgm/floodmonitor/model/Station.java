@@ -6,6 +6,7 @@ public class Station {
     private String name;
     private String location;
     private StationStatus status;
+    private double waterFlow;
 
     public Station() {
     }
@@ -15,6 +16,13 @@ public class Station {
         this.name = name;
         this.location = location;
         this.status = status;
+    }
+    public double getWaterFlow() {
+        return waterFlow;
+    }
+
+    public void setWaterFlow(double waterFlow) {
+        this.waterFlow = waterFlow;
     }
 
     public Long getId() {
