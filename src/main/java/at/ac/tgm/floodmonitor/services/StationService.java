@@ -25,4 +25,8 @@ public class StationService {
                 .findFirst()
                 .orElse(null);
     }
+    public int getStationCount() {
+        return stations.size();
+    }
+
 }
