@@ -37,6 +37,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-validation-test'
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // API-Dokumentation und Swagger UI
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.2.0'
 }
 
 tasks.named('test') {
